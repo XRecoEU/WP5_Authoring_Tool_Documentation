@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Screen Video Helper Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .property {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Green Screen Video Helper</h1>
+    <p>The <strong>Green Screen Video Helper</strong> component allows you to manage and display green screen videos within your Unity scenes. It provides tools for loading, preparing, and displaying videos on a material with real-time updates and customization options.</p>
+
+    <div class="section">
+        <h2>Inspector Properties</h2>
+
+        <h3>Core Properties</h3>
+        <div class="property">
+            <strong>Green Screen Video</strong>: The video clip to be displayed on the green screen.
+        </div>
+        <div class="property">
+            <strong>Video Player</strong>: The <em>VideoPlayer</em> component used to play the video.
+        </div>
+        <div class="property">
+            <strong>Green Screen Material</strong>: The material used to render the green screen video.
+        </div>
+        <div class="property">
+            <strong>Green Screen Renderer</strong>: The <em>MeshRenderer</em> that displays the green screen video.
+        </div>
+
+        <h3>Internal Settings</h3>
+        <div class="property">
+            <strong>Green Screen Texture</strong>: A dynamically created render texture that matches the dimensions of the video.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>How It Works</h2>
+        <p>The Green Screen Video Helper component handles the following tasks:</p>
+        <ul>
+            <li><strong>Video Playback:</strong> Loads and plays a green screen video on a material.</li>
+            <li><strong>Texture Management:</strong> Creates a render texture to match the video's dimensions and applies it to the material.</li>
+            <li><strong>Frame Preview:</strong> Displays a specific frame of the video based on a normalized time value.</li>
+            <li><strong>Aspect Ratio Adjustment:</strong> Automatically scales the renderer to match the aspect ratio of the video.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Setup Instructions</h2>
+        <ol>
+            <li>Attach the <strong>GreenScreenVideoHelper</strong> script to a GameObject in your scene.</li>
+            <li>Assign a <em>VideoClip</em> to the <em>Green Screen Video</em> property in the Inspector.</li>
+            <li>Ensure the GameObject contains the following components:
+                <ul>
+                    <li>A <em>VideoPlayer</em> component.</li>
+                    <li>A <em>MeshRenderer</em> with a material to display the video.</li>
+                </ul>
+            </li>
+            <li>Configure the green screen material as needed. The video will be applied as the material's main texture.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Using the Component</h2>
+        <ul>
+            <li><strong>Show Frame:</strong> Call the <code>ShowFrame(float normalizedTime)</code> method to display a specific frame of the video. The <em>normalizedTime</em> parameter is a value between 0 (start of the video) and 1 (end of the video).</li>
+            <li><strong>Prepare Video Player:</strong> The component prepares the video player on startup and can adjust settings dynamically via the <code>PrepareVideoPlayer(bool showFirstFrame)</code> method.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Tips</h2>
+        <ul>
+            <li>Ensure the <em>Green Screen Video</em> property is assigned a valid video clip.</li>
+            <li>Use the <em>Refresh</em> button in the custom editor to update the green screen setup if you make changes.</li>
+            <li>For optimal performance, test your setup in the Unity Editor and on your target platform.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.</p>
+    </footer>
+</body>
+</html>
