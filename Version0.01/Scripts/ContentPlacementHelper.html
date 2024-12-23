@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Placement Helper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #005a9c;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        h1, h2 {
+            color: #005a9c;
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .code {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Content Placement Helper</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>The <strong>Content Placement Helper</strong> is a Unity component designed to simplify the placement of 3D assets within predefined areas. This tool ensures that the assets are appropriately scaled and centered within the designated area, making it easier to manage and display content in your scene.</p>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Allows for the placement of a 3D asset within a predefined box.</li>
+                <li>Automatically scales the asset to fit the bounding box.</li>
+                <li>Supports aligning the asset to the top, middle, or bottom of the box.</li>
+                <li>Dynamic bounding box calculation for accurate scaling and placement.</li>
+                <li>Visual representation of the bounding box and asset placement using Gizmos in the Unity Editor.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Inspector Properties</h2>
+            <ul>
+                <li><strong>Content To Place:</strong> The 3D asset to be placed in the scene.</li>
+                <li><strong>Model Anchor Position:</strong> Determines the vertical alignment of the asset within the bounding box (Top, Middle, Bottom).</li>
+                <li><strong>Model Instance (Read-Only):</strong> The instantiated 3D asset in the scene.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>How to Use</h2>
+            <ol>
+                <li>Add the <strong>Content Placement Helper</strong> component to an empty GameObject in your scene.</li>
+                <li>Specify the 3D asset you want to place in the <em>Content To Place</em> field.</li>
+                <li>Adjust the bounding box dimensions by scaling the GameObject.</li>
+                <li>Select the desired <em>Model Anchor Position</em> (Top, Middle, or Bottom).</li>
+                <li>Call the <code>SpawnModel</code> method (e.g., through a script or via the Unity Editor) to place and scale the asset within the bounding box.</li>
+                <li>Use the <code>DeSpawnModel</code> method to remove the asset if needed.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Editor Gizmos</h2>
+            <p>The component uses Gizmos to visualize the bounding box and the placement of the asset in the Unity Editor:</p>
+            <ul>
+                <li>The bounding box is shown as a purple translucent box.</li>
+                <li>The placed asset's bounding box is shown as a green translucent box.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.
+    </footer>
+</body>
+</html>
