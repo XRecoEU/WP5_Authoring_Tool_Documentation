@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographics Template Scene Documentation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .property {
-            margin-left: 20px;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Infographics Template Scene</title>
+    <link rel="stylesheet" href="../includes/style.css">
+    </link> <!-- important for formatting -->
 </head>
+
 <body>
-    <h1>Infographics Template Scene</h1>
-    <p>The <strong>Infographics Template Scene</strong> is designed to help users create interactive and visually engaging 3D infographics for 2D screens, including mobile, PC, and web platforms. This scene is pre-configured with essential components and serves as a starting point for your infographic projects.</p>
+    <script src="../includes/setupScript.js"></script> <!-- importent for formating -->
+    <header>
+        <h1>Infographics Template Scene</h1>
+    </header>
 
-    <div class="section">
-        <h2>Contents of the Template Scene</h2>
+    <main>
+        <div class="section">
+            <h2>Overview</h2>
+            <p>The <strong>Infographics Template Scene</strong> is designed to help users create interactive and
+                visually
+                engaging 3D infographics for 2D screens, including mobile, PC and web platforms. This scene is
+                pre-configured with essential components and serves as a starting point for your infographic projects.
+            </p>
 
-        <h3>Example 3D Model</h3>
-        <p>An example 3D model is included in the scene. This model can be replaced with your own 3D assets. Simply import your model into the project and update the scene accordingly.</p>
+        </div>
 
-        <h3>Annotation Prefabs</h3>
-        <p>The scene includes example annotations as prefabs. These annotations can be linked to different parts of the 3D model to highlight key details. For detailed documentation on the annotations, visit the <a href="path/to/annotation_documentation.html">Annotations Documentation</a>.</p>
 
-        <h3>Orbit Camera</h3>
-        <p>The template uses an <a href="path/to/orbit_camera_documentation.html">Orbit Camera</a> for intuitive navigation around the 3D model. The camera supports mouse and touch controls for zooming, rotating, and panning.</p>
-    </div>
+        <div class="section">
+            <h2>Contents</h2>
 
-    <div class="section">
-        <h2>Setup Instructions</h2>
-        <ol>
-            <li>Open the <strong>Infographics Template Scene</strong> in Unity.</li>
-            <li>Replace the example 3D model with your own by dragging your model into the scene and aligning it as needed.</li>
-            <li>Customize the annotations by modifying the prefab instances or creating new ones.</li>
-            <li>Adjust the Orbit Camera settings if necessary to match your desired interaction experience.</li>
-        </ol>
-    </div>
+            <h3>Orbit Camera</h3>
+            <p>The template uses an <a href="../Prefabs/Cameras/OrbitCamera.html">Orbit Camera</a> for intuitive
+                navigation around the 3D model. The camera supports mouse and touch controls for zooming, rotating, and
+                panning.</p>
 
-    <div class="section">
-        <h2>Customizing the Scene</h2>
-        <ul>
-            <li><strong>Replace Example Model:</strong> Delete the placeholder 3D model and add your own assets. Ensure the model is scaled and positioned appropriately.</li>
-            <li><strong>Modify Annotations:</strong> Edit the existing annotation prefabs or create new instances for additional points of interest.</li>
-            <li><strong>Camera Adjustments:</strong> Use the Inspector to fine-tune the Orbit Camera's zoom limits, rotation speed, and other parameters.</li>
-        </ul>
-    </div>
+            <h3>Example 3D Model</h3>
+            <p>An example 3D model is included in the scene. This model can be replaced with your own 3D assets. Simply
+                import your model into the project and update the scene accordingly. Use the <a
+                    href="../Scripts/ContentPlacementHelper.html">ContentPlacementHelper-Plugin</a> to place and
+                manipulate the model as you like. </p>
 
-    <div class="section">
-        <h2>Best Practices</h2>
-        <ul>
-            <li>Keep your 3D model optimized for performance, especially for mobile and web platforms.</li>
-            <li>Use annotations to highlight key features or provide additional context for your infographic.</li>
-            <li>Test the scene on all target platforms to ensure consistent performance and usability.</li>
-        </ul>
-    </div>
+            <h3>Annotation Prefabs</h3>
+            <p>The scene includes example annotations as prefabs. These annotations can be linked to different parts of
+                the 3D model to highlight key details. For detailed documentation on the annotations, visit the <a
+                    href="../Prefabs/Infographics/3dAnnotation.html">Annotations Documentation</a>.</p>
 
+
+        </div>
+
+        <div class="section">
+            <h2>Setup Instructions</h2>
+            <ol>
+                <li>Open the <strong>Infographics Template Scene</strong> in Unity.</li>
+                <li>Replace the example 3D model with your own by dragging your model into the scene and aligning it as
+                    needed.</li>
+                <li>Customize the annotations by modifying the prefab instances or creating new ones.</li>
+                <li>Adjust the Orbit Camera settings if necessary to match your desired interaction experience.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Customizing the Scene</h2>
+            <ul>
+                <li><strong>Replace Example Model:</strong> Delete the placeholder 3D model and add your own assets.
+                    Ensure the model is scaled and positioned appropriately.</li>
+                <li><strong>Modify Annotations:</strong> Edit the existing annotation prefabs or create new instances
+                    for additional points of interest.</li>
+                <li><strong>Camera Adjustments:</strong> Use the Inspector to fine-tune the Orbit Camera's zoom limits,
+                    rotation speed, and other parameters.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Keep your 3D model optimized for performance, especially for mobile and web platforms.</li>
+                <li>Use annotations to highlight key features or provide additional context for your infographic.</li>
+                <li>Test the scene on all target platforms to ensure consistent performance and usability.</li>
+            </ul>
+        </div>
+    </main>
     <footer>
         <p>&copy; 2024 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
