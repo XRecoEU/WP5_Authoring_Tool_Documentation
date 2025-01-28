@@ -1,106 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbit Camera Documentation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .property {
-            margin-left: 20px;
-        }
-    </style>
+    <title>Orbit Camera</title>
+    <link rel="stylesheet" href="../../includes/style.css">
+    </link> <!-- important for formatting -->
 </head>
+
 <body>
-    <h1>Orbit Camera</h1>
-    <p>The <strong>Orbit Camera</strong> prefab allows users to control a camera that orbits around a specified target. It supports both mouse and touch controls for panning, rotating, and zooming. This component is designed for intuitive camera navigation, making it ideal for 3D scene exploration or interactive environments.</p>
+    <script src="../includes/setupScript.js"></script> <!-- importent for formating -->
+    <header>
+        <h1>Orbit Camera</h1>
+    </header>
 
-    <div class="section">
-        <h2>Inspector Properties</h2>
-
-        <h3>Camera Settings</h3>
-        <div class="property">
-            <strong>Affected Camera</strong>: The camera that will be controlled by this component.
+    <main>
+        <div class="section">
+            <h2>Overview</h2>
+            <p>The <strong>Orbit Camera</strong> prefab allows users to control a camera that orbits around a specified
+                target. It supports both mouse and touch controls for panning, rotating, and zooming. This component is
+                designed for intuitive camera navigation, making it ideal for 3D scene exploration or interactive
+                environments .</p>
         </div>
-        <div class="property">
-            <strong>Target to Look At</strong>: The object the camera will orbit around.
-        </div>
 
-        <h3>Control Options</h3>
-        <div class="property">
-            <strong>Controls</strong>: Specifies the input methods for controlling the camera. Options:
+        <div class="section">
+            <h2>Features</h2>
             <ul>
-                <li><strong>Mouse</strong>: Allows camera control using a mouse.</li>
-                <li><strong>Touch</strong>: Enables touch gestures for camera control.</li>
+
+                <li>Allows for the placement of a 3D asset within a predefined box.</li>
+                <li>Automatically scales the asset to fit the bounding box.</li>
+                <li>Supports aligning the asset to the top, middle, or bottom of the box.</li>
+                <li>Dynamic bounding box calculation for accurate scaling and placement.</li>
+                <li>Visual representation of the bounding box and asset placement using Gizmos in the Unity Editor.
+                </li>
+
             </ul>
         </div>
 
-        <h3>Initial Distance and Rotation</h3>
-        <div class="property">
-            <strong>Distance to Target</strong>: Sets the starting distance between the camera and the target. This value is clamped by <em>Minimum Zoom Distance</em> and <em>Maximum Zoom Distance</em>.
-        </div>
-        <div class="property">
-            <strong>Y-Axis Value</strong>: The initial rotation angle around the vertical (Y) axis.
-        </div>
-        <div class="property">
-            <strong>X-Axis Value</strong>: The initial rotation angle around the horizontal (X) axis.
+
+        <div class="section">
+            <h2>Inspector Properties</h2>
+
+            <h3>Camera Settings</h3>
+            <div class="property">
+                <strong>Affected Camera</strong>: The camera that will be controlled by this component.
+            </div>
+            <div class="property">
+                <strong>Target to Look At</strong>: The object the camera will orbit around.
+            </div>
+
+            <h3>Control Options</h3>
+            <div class="property">
+                <strong>Controls</strong>: Specifies the input methods for controlling the camera. Options:
+                <ul>
+                    <li><strong>Mouse</strong>: Allows camera control using a mouse.</li>
+                    <li><strong>Touch</strong>: Enables touch gestures for camera control.</li>
+                </ul>
+            </div>
+
+            <h3>Initial Distance and Rotation</h3>
+            <div class="property">
+                <strong>Distance to Target</strong>: Sets the starting distance between the camera and the target. This
+                value is clamped by <em>Minimum Zoom Distance</em> and <em>Maximum Zoom Distance</em>.
+            </div>
+            <div class="property">
+                <strong>Y-Axis Value</strong>: The initial rotation angle around the vertical (Y) axis.
+            </div>
+            <div class="property">
+                <strong>X-Axis Value</strong>: The initial rotation angle around the horizontal (X) axis.
+            </div>
+
+            <h3>Zoom Settings</h3>
+            <div class="property">
+                <strong>Zoom Speed</strong>: The speed at which the camera zooms in and out.
+            </div>
+            <div class="property">
+                <strong>Minimum Zoom Distance</strong>: The closest the camera can get to the target.
+            </div>
+            <div class="property">
+                <strong>Maximum Zoom Distance</strong>: The farthest the camera can be from the target.
+            </div>
         </div>
 
-        <h3>Zoom Settings</h3>
-        <div class="property">
-            <strong>Zoom Speed</strong>: The speed at which the camera zooms in and out.
-        </div>
-        <div class="property">
-            <strong>Minimum Zoom Distance</strong>: The closest the camera can get to the target.
-        </div>
-        <div class="property">
-            <strong>Maximum Zoom Distance</strong>: The farthest the camera can be from the target.
-        </div>
-    </div>
+        <div class="section">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Attach the <strong>SimplifiedOrbitCameraMovement</strong> script to a GameObject in your scene.</li>
+                <li>Assign a camera to the <em>Affected Camera</em> property in the Inspector.</li>
+                <li>Set a target object in the <em>Target to Look At</em> field. This is the object the camera will
+                    orbit around.</li>
+                <li>Configure the initial distance, rotation, and zoom settings to suit your scene.</li>
+                <li>Select the desired input controls (Mouse, Touch, or both).</li>
+            </ol>
 
-    <div class="section">
-        <h2>How It Works</h2>
-        <p>The Orbit Camera component provides the following functionality:</p>
-        <ul>
-            <li><strong>Rotation:</strong> Use the mouse or touch gestures to rotate the camera around the target.</li>
-            <li><strong>Zoom:</strong> Scroll the mouse wheel or pinch to zoom in and out.</li>
-            <li><strong>Panning:</strong> Drag the camera view using the right mouse button or a single touch gesture.</li>
-        </ul>
-    </div>
+        </div>
 
-    <div class="section">
-        <h2>Setup Instructions</h2>
-        <ol>
-            <li>Attach the <strong>SimplifiedOrbitCameraMovement</strong> script to a GameObject in your scene.</li>
-            <li>Assign a camera to the <em>Affected Camera</em> property in the Inspector.</li>
-            <li>Set a target object in the <em>Target to Look At</em> field. This is the object the camera will orbit around.</li>
-            <li>Configure the initial distance, rotation, and zoom settings to suit your scene.</li>
-            <li>Select the desired input controls (Mouse, Touch, or both).</li>
-        </ol>
-    </div>
+        <div class="section">
+            <h2>Additional Instructions</h2>
+            <p>The Orbit Camera component provides the following functionality:</p>
+            <ul>
+                <li><strong>Rotation:</strong> Use the mouse or touch gestures to rotate the camera around the target.
+                </li>
+                <li><strong>Zoom:</strong> Scroll the mouse wheel or pinch to zoom in and out.</li>
+                <li><strong>Panning:</strong> Drag the camera view using the right mouse button or a single touch
+                    gesture.</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>Tips</h2>
-        <ul>
-            <li>Ensure the target object is not null, as the camera orbits around this point.</li>
-            <li>For touch controls, test the functionality on a device that supports touch input.</li>
-            <li>Use the <em>Minimum</em> and <em>Maximum Zoom Distance</em> to prevent the camera from getting too close or too far from the target.</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Ensure the target object is not null, as the camera orbits around this point.</li>
+                <li>For touch controls, test the functionality on a device that supports touch input.</li>
+                <li>Use the <em>Minimum</em> and <em>Maximum Zoom Distance</em> to prevent the camera from getting too
+                    close or too far from the target.</li>
+            </ul>
+        </div>
+
+    </main>
 
     <footer>
         <p>&copy; 2024 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.</p>
     </footer>
+
 </body>
+
 </html>
