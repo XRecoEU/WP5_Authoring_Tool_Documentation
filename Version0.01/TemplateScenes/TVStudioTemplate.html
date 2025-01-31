@@ -19,49 +19,77 @@
 
         <div class="section">
             <h2>Overview</h2>
-            <p>The <strong>TV Studio Template Scene</strong> is designed to help users to...</p>
-
+            <p>The <strong>TV Studio Template Scene</strong> is designed to assist users in creating their own TV studio
+                filming experience.
+                It offers a variety of features, such as the ability to insert 3D models, adjust camera perspectives for
+                individual filming opportunities,
+                and incorporate greenscreen videos within a 3D environment.</p>
         </div>
 
         <div class="section">
             <h2>Contents</h2>
 
             <h3>TV Studio Environment</h3>
-            <p>The scene template creates a complete environment of a typical TV studio. It contains two stages, where
-                the user can display different content.</p>
+            <p>The scene template creates a complete environment of a typical TV studio.
+                It contains two stages, where the user can display different content.
+                In the hierarchy, you will find the individual stages and their associated plugins,
+                which allow you to add new content. For a better understanding, take a look at the <a
+                    href="../Prefabs/Plugin_overview.html">Prefab Documentation</a></p>
 
             <h3>First Stage with Greenscreen video</h3>
-            <p>Paragraph</p>
+            <p>On the first stage, you can insert a greenscreen, which will then be displayed on a stage with spotlights
+                and two screens in the background.
+                For detailed information on how to customize the greenscreen video, take a look the <a
+                    href="../Prefabs/VideoStudio/GreenScreenVideo.html">Greenscreen Video Prefab Documentation</a></p>
 
             <h3>Second Stage with an Exmaple Model</h3>
-            <p>Paragraph</p>
+            <p>On the second stage, you can display various 3D models.
+                To edit or modify this models, visit the <a
+                    href="../Prefabs/VideoStudio/ContentPlacementHelper.html">Content Placement Helper Prefab
+                    Documentation</a>
+                To display the second stage in your application,
+                you can place an <a href="../Prefabs/Cameras/OrbitCamera.html">Orbit Camera Prefab
+                    Documentation</a> in the environment and use the <a
+                    href="../Prefabs/Cameras/SwitchCameraButton.html">Switch-Camera-Button</a> to toggle between the
+                different viewer's perspectives.</p>
 
             <h3>Recording Helper</h3>
-            <p>Paragraph</p>
-
+            <p>With the <a href="../Prefabs/VideoStudio/RecordingHelper.html">Recording Helper Prefab</a>, you can start
+                and stop a recording directly in the play mode (inspector window). The recording will be
+                captured based on the current camera view. You can save this recording as an MP4 file and use it
+                for further purposes.</p>
         </div>
 
         <div class="section">
             <h2>Setup Instructions</h2>
             <ol>
                 <li>Open the <strong>TV Studio Template Scene</strong> in Unity.</li>
-                <li>Todo by the user </li>
+                <li>Replace the example Greenscreen Video in the first stage with your own by dragging your video into
+                    the scene and aligning it as
+                    needed.</li>
+                <li>Replace the example 3d model in the second stage with your own by dragging your model into
+                    the scene and aligning it as
+                    needed.</li>
+                <li>Place a new camera in the scene and toggle between viewer's perspectives with help of the Switch
+                    Camera Button Prefab.</li>
+                <li>Use the Recording Helper Prefab to create your own TV studio recording.</li>
             </ol>
         </div>
 
         <div class="section">
             <h2>Customizing the Scene</h2>
             <ul>
-                <li><strong>TODOs1</li>
-                <li><strong>TODOs2</li>
+                <li><strong>Use the XReco Toolbar to change the Light Intensity.</li>
+                <li><strong>Use other <a href="../Prefabs/Prefab_overview.html"> Prefabs</a> to optimize your
+                        experience.</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Best Practices</h2>
             <ul>
-                <li>more Annotation for better use </li>
-                <li>linkelement: <a href="../General/ExampleDocumentation.html">Link to ExampleDocumentation</a> </li>
+                <li>Use more cameras to create a better experience for the viewer.</li>
+                <li>Test the scene on all target platforms to ensure consistent performance and usability.</li>
             </ul>
         </div>
 
