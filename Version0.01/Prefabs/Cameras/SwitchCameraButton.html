@@ -19,33 +19,53 @@
 
         <div class="section">
             <h2>Overview</h2>
-            <p>The <strong>Switch Camera Button Prefab</strong> is designed to help users to...</p>
+            <p>The <strong>Switch Camera Button Prefab</strong> is designed to allow the user to switch between
+                different cameras, providing a better overview of the scene. It creates a canvas with a 2D button that
+                can be pressed in the final application.</p>
 
         </div>
 
         <div class="section">
             <h2>Inspector Properties</h2>
             <ul>
-                <li><strong>todo</strong> </li>
+                <li>In the Inspector of the <strong>OnClickReaction</strong> gameobject you can select the cameras you
+                    would like to toggle between.</li>
+                <li>Use the add button in the <strong>Objects To Activate</strong>-dropdown to select other gameobjects
+                    you would like to activate when you toggle between the camera view.
+                </li>
+                <li>Use the add button in the <strong>Objects To Deactivate</strong>-dropdown to select other
+                    gameobjects
+                    you would like to deactivate when you toggle between the camera view.
+                </li>
+
             </ul>
         </div>
 
         <section>
             <h2>How to Use</h2>
             <ol>
-                <li>Add the <strong>Content Placement Helper</strong> component to an empty GameObject in your scene.
-                </li>
-
+                <li>Add the <strong>Switch Camera Button Prefab</strong> component to an empty GameObject in your scene.
+                    This Creates an 2D Button in the Play Mode. </li>
+                <li>Add a camera that you like to switch between the main camera and the other view.</li>
+                <li>Move the Camera to the right location, if not already visable activate the camera view in the lower
+                    toolbar.</li>
+                <li>Drag and drop the Camera gameobject into the inspector of the <strong>OnClickReaction</strong>
+                    gameobject.</li>
+                <li>There you can also activate and deactivate other gameobject.</li>
+                <li>Use the <strong>Toggle button</strong> to change the camera view.</li>
             </ol>
         </section>
 
         <section>
             <h2>Editor Adjustments</h2>
-            <p>To use the Switch Camera Button Prefab Prefab in your scene you can use the following adjustments in the
+            <p>To use the Switch Camera Button Prefab in your scene you can use the following adjustments in the
                 editor:
             </p>
             <ul>
-                <li>You can use the... to...</li>
+                <li>Activate the camera view in the lower toolbar of the scene view to better position of the camera
+                    gameobject.</li>
+                <li>To move the camera use the three arrows for the three axes, for more informations look at the
+                    control options of the <a href="../../Prefabs/Cameras/OrbitCamera.html"> Orbit Camera</a>. </li>
             </ul>
         </section>
 
@@ -54,7 +74,9 @@
             <p>To use the Switch Camera Button Prefab Prefab in your scene you can use the following adjustments:
             </p>
             <ul>
-                <li>You can use the... to...</li>
+                <li>You can change the text content of the button within the Text Component of the
+                    <strong>Button_Label</strong> gameobject.
+                </li>
             </ul>
         </section>
 
@@ -62,7 +84,6 @@
             <h2>Best Practices</h2>
             <ul>
                 <li>more Annotation for better use </li>
-                <li>linkelement: <a href="../General/ExampleDocumentation.html">Link to ExampleDocumentation</a> </li>
             </ul>
         </div>
 
