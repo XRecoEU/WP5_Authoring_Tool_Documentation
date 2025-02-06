@@ -19,23 +19,41 @@
 
         <div class="section">
             <h2>Overview</h2>
-            <p>The <strong>3d Annotation</strong> is designed to help users to...</p>
+            <p>The <strong>3d Annotation</strong> Prefab is designed to help users to place various user-specific
+                annotations on their 3D models. These annotations can include images, videos, or ordanary text elements.
+            </p>
 
         </div>
 
         <div class="section">
             <h2>Inspector Properties</h2>
             <ul>
-                <li><strong>todo</strong> </li>
+                <li><strong>3dAnnotationWithCanvas:</strong> Hold all your annotaions and make it
+                    possible to see this directly in the play view.</li>
+                <li><strong>3dAnnotation:</strong> With this gameobject you can place the Annotations in a specific
+                    position in 3D world.</li>
+                <li><strong>Collapsed:</strong> contains the button that is directly visible in the play mode. Once this
+                    button is clicked, it disappears, and the annotations contained in the <strong>Expanded
+                        gameobjects</strong> appears.</li>
+                <li><strong>Expanded:</strong> contains all annotation objects, that will ne toggle by clicking on the
+                    collapsed button. You can insert images, videos or text objects.</li>
             </ul>
         </div>
 
         <section>
             <h2>How to Use</h2>
             <ol>
-                <li>Add the <strong>Content Placement Helper</strong> component to an empty GameObject in your scene.
+                <li>You should first add the <strong>3D annotation with canvas prefab</strong> to your scene so that
+                    your annotations are directly visible in play mode.
                 </li>
-
+                <li>Move the <strong>3D annotation gameobject</strong> to the right position in your 3d scene.
+                </li>
+                <li>In the <strong>Collapsed gameobject</strong> you can change the text of the button and also insert a
+                    image to it.
+                </li>
+                <li> In the <strong>Expanded gameobject</strong> you can change the text of the annnotations and insert
+                    additional images or videos.
+                </li>
             </ol>
         </section>
 
@@ -44,10 +62,14 @@
             <p>To use the 3d Annotation Prefab in your scene you can use the following adjustments in the editor:
             </p>
             <ul>
-                <li>You can use the... to...</li>
+                <li>You can use the <strong>Attach To Cursor</strong> button in the lower right corner in the scene view
+                    to place the annotation directly on the 3d model.</li>
+                <li>You can use the <strong>Lightning Intensity</strong> scrollbar in the middle lower area of the scene
+                    view to adjust the lightning of your scene.</li>
             </ul>
         </section>
 
+        <!--
         <section>
             <h2>Additional Instructions</h2>
             <p>To use the 3d Annotation Prefab in your scene you can use the following adjustments:
@@ -56,14 +78,15 @@
                 <li>You can use the... to...</li>
             </ul>
         </section>
+        -->
 
         <div class="section">
             <h2>Best Practices</h2>
             <ul>
                 <li>more Annotation for better use </li>
-                <li>linkelement: <a href="../General/ExampleDocumentation.html">Link to ExampleDocumentation</a> </li>
             </ul>
         </div>
+
 
         <!--   <div class="section">
         <h2>Need Help?</h2>
