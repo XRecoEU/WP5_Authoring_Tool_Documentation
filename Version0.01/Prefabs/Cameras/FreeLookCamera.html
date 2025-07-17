@@ -19,22 +19,35 @@
 
         <div class="section">
             <h2>Overview</h2>
-            <p>The <strong>Free Look Camera</strong> can be controlled with the WASD keyboard buttons.</p>
+            <p>The <strong>Free Look Camera</strong> can be controlled with the Mouse or with WASD keyboard buttons.</p>
 
         </div>
 
         <div class="section">
             <h2>Inspector Properties</h2>
-            <ul>
-                <li><strong>todo</strong> </li>
+			<ul>
+				<li><strong>Cam</strong>: The camera that will be controlled by this component.</li>
+                <li><strong>Controls</strong>: Specifies the input methods for controlling the camera. Options:
+					<ul><li><strong>Mouse</strong>: Allows camera control using a mouse.</li>
+						<li><strong>Touch</strong>: Enables touch gestures for camera control.</li>
+					</ul></li>
+                <li><strong>Speed</strong>: movement speed of the camera </li>
+                <li><strong>Two Step Speed</strong>: second movement speed of the camera, enabled by left shift button </li>
+                <li><strong>Invert Rotation</strong>: If checked invertes the rotation of the camera </li>
+                <li><strong>Rotation Speed</strong>: speed of the camera rotation</li>
             </ul>
         </div>
 
         <section>
             <h2>How to Use</h2>
             <ol>
-                <li>Add the <strong>Content Placement Helper</strong> component to an empty GameObject in your scene.
-                </li>
+                <li>Add the <strong>Free Look Camera</strong> GameObject to your scene.</li>
+				<li>Assign a camera to the <em>Cam</em> property in the Inspector.</li>
+                <li>Set a target object in the <em>Target to Look At</em> field. This is the object the camera will
+                    orbit around.</li>
+                <li>Configure the initial distance, rotation, and zoom settings to suit your scene.</li>
+                <li>Select the desired input controls (Mouse, Touch, or both).</li>
+                <li>Activate the Camera view in the toolbar to place the camera on the right position.</li>
 
             </ol>
         </section>

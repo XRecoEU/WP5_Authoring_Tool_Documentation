@@ -26,15 +26,26 @@
         <div class="section">
             <h2>Inspector Properties</h2>
             <ul>
-                <li><strong>todo</strong> </li>
+                <li><strong>Green Screen Video</strong>: The video clip to be displayed on the green screen. </li>
+                <li><strong>Video Player</strong>: The <em>VideoPlayer</em> component used to play the video. </li>
+                <li><strong>Green Screen Material</strong>: The material used to render the green screen video.</li>
+                <li><strong>Green Screen Renderer</strong>: The <em>MeshRenderer</em> that displays the green screen video. </li>
+
             </ul>
         </div>
 
         <section>
             <h2>How to Use</h2>
             <ol>
-                <li>Add the <strong>Content Placement Helper</strong> component to an empty GameObject in your scene.
-                </li>
+                <li>Add the <strong>GreenScreenVideoHelper</strong> script to a GameObject in your scene.</li>
+				<li>Assign a <em>VideoClip</em> to the <em>Green Screen Video</em> property in the Inspector.</li>
+				<li>Ensure the GameObject contains the following components:
+                <ul>
+                    <li>A <em>VideoPlayer</em> component.</li>
+                    <li>A <em>MeshRenderer</em> with a material to display the video.</li>
+                </ul>
+            </li>
+            <li>Configure the green screen material as needed. The video will be applied as the material's main texture.</li>
 
             </ol>
         </section>
@@ -75,7 +86,7 @@
 
 
     <footer>
-        <p>&copy; 2024 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.</p>
+        <p>&copy; 2025 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.</p>
     </footer>
 
 </body>

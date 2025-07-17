@@ -18,49 +18,32 @@
     <main>
         <section>
             <h2>Overview</h2>
-            <p>The <strong>XReco Comment</strong> is a Unity component designed to add a custom color to the hierarchy background of the GameObject.</p>
+            <p>The <strong>XReco Comment</strong> is a Unity component designed to add a custom color to the hierarchy background of the referenced component.</p>
             <ul>
-                <li>Allows for the placement of a 3D asset within a predefined box.</li>
-                <li>Automatically scales the asset to fit the bounding box.</li>
-                <li>Supports aligning the asset to the top, middle, or bottom of the box.</li>
-                <li>Dynamic bounding box calculation for accurate scaling and placement.</li>
-                <li>Visual representation of the bounding box and asset placement using Gizmos in the Unity Editor.</li>
-                </strong<>
+                <li>Automatically mappes the documentation of the referenced component to the open Documentation Button.</li>
+                
         </section>
 
         <section>
             <h2>Inspector Properties</h2>
             <ul>
-                <li><strong>Content To Place:</strong> The 3D asset to be placed in the scene.</li>
-                <li><strong>Model Anchor Position:</strong> Determines the vertical alignment of the asset within the
-                    bounding box (Top, Middle, Bottom).</li>
-                <li><strong>Model Instance (Read-Only):</strong> The instantiated 3D asset in the scene.</li>
+                <li><strong>Button: --> Open Documentation</strong> this opens the documentation of the referenced component</li>
+                <li><strong>Button: Edit</strong> Opens the edit window for the referenced component.
+							Here can the reference or some of its attributes be edited.</li>
             </ul>
         </section>
 
         <section>
             <h2>How to Use</h2>
             <ol>
-                <li>Add the <strong>Content Placement Helper</strong> component to an empty GameObject in your scene.
+                <li>Add the <strong>XReco Comment</strong> component to an empty GameObject in your scene.
                 </li>
-                <li>Specify the 3D asset you want to place in the <em>Content To Place</em> field.</li>
-                <li>Adjust the bounding box dimensions by scaling the GameObject.</li>
-                <li>Select the desired <em>Model Anchor Position</em> (Top, Middle, or Bottom).</li>
-                <li>Call the <code>SpawnModel</code> method (e.g., through a script or via the Unity Editor) to place
-                    and scale the asset within the bounding box.</li>
-                <li>Use the <code>DeSpawnModel</code> method to remove the asset if needed.</li>
+                <li>Add another XReco component to the GameObject</li>
+                <li>To be specified</li>
+                
             </ol>
         </section>
 
-        <section>
-            <h2>Editor Gizmos</h2>
-            <p>The component uses Gizmos to visualize the bounding box and the placement of the asset in the Unity
-                Editor:</p>
-            <ul>
-                <li>The bounding box is shown as a purple translucent box.</li>
-                <li>The placed asset's bounding box is shown as a green translucent box.</li>
-            </ul>
-        </section>
     </main>
     <footer>
         &copy; 2025 Capgemini Engineering Deutschland S.A.S Co. KG. All rights reserved.
